@@ -2,28 +2,40 @@
 
 ## 📌 Project Overview
 
-Enterprise Media Platform is a production-style Angular application designed to manage digital media assets, quality control workflows, packaging, and content delivery.
+Enterprise Media Platform is a production-style Angular application built with Angular 20 to manage digital media assets, quality control workflows, packaging, and content delivery.
 
-This project is being developed to demonstrate enterprise Angular architecture and best practices.
+This project demonstrates enterprise Angular architecture, reusable components, routing, and scalable application design.
 
 ---
 
-## 🚀 Features
+## ✅ Completed Features
+
+- Dashboard
+- User Management (CRUD)
+  - Add User
+  - Edit User
+  - Delete User
+- Angular Standalone Components
+- Angular Routing
+- Two-way Data Binding
+- Component Communication
+- Responsive UI
+
+---
+
+## 🚧 Planned Features
 
 - JWT Authentication
-- Dashboard
 - Media Library
 - Upload Center
 - Quality Control (QC)
-- User Management
 - Reports & Analytics
-- Responsive Design
-- Lazy Loading
 - Route Guards
 - HTTP Interceptors
 - RxJS
 - Angular Signals
 - Angular Material UI
+- REST API Integration
 
 ---
 
@@ -31,11 +43,8 @@ This project is being developed to demonstrate enterprise Angular architecture a
 
 - Angular 20
 - TypeScript
-- RxJS
-- Angular Material
+- HTML5
 - SCSS
-- REST API
-- JSON Server
 - Git & GitHub
 
 ---
@@ -56,7 +65,7 @@ src/
 
 ## 📸 Screenshots
 
-> Screenshots will be added after the first release.
+Screenshots will be added as each module is completed.
 
 ---
 
@@ -64,11 +73,16 @@ src/
 
 🚧 Currently under development.
 
-Upcoming modules:
+### Completed Modules
+
+- Dashboard
+- User Management (CRUD)
+
+### Upcoming Modules
 
 - Authentication
-- Dashboard
 - Media Library
+- Upload Center
 - QC Module
 - Reports
 - Settings
@@ -79,7 +93,7 @@ Upcoming modules:
 
 **Rambabu Gaddala**
 
-Angular Developer | 3.7+ Years Experience
+Angular Developer
 
 GitHub:
 https://github.com/Ram-developer0809
