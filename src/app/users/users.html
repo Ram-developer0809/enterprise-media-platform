@@ -1,0 +1,98 @@
+<div class="users-container">
+
+  <h2>Users Management</h2>
+
+  <!-- Search & Filter -->
+  <div class="toolbar">
+
+    <input
+      type="text"
+      [(ngModel)]="searchText"
+      placeholder="Search User">
+
+    <select [(ngModel)]="selectedRole">
+      <option value="">All Roles</option>
+      <option value="Admin">Admin</option>
+      <option value="Editor">Editor</option>
+      <option value="User">User</option>
+    </select>
+
+  </div>
+
+  <!-- Add / Update Form -->
+  <div class="form">
+
+    <input
+      type="text"
+      [(ngModel)]="newUser.name"
+      placeholder="Name">
+
+    <input
+      type="email"
+      [(ngModel)]="newUser.email"
+      placeholder="Email">
+
+    <select [(ngModel)]="newUser.role">
+      <option value="">Select Role</option>
+      <option value="Admin">Admin</option>
+      <option value="Editor">Editor</option>
+      <option value="User">User</option>
+    </select>
+
+    <button class="add-btn" (click)="addUser()">
+      {{ editIndex !== null ? 'Update User' : 'Add User' }}
+    </button>
+
+  </div>
+
+  <!-- Users Table -->
+  <table>
+
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th width="180">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let user of filteredUsers; let i = index">
+
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+
+        <td>
+
+          <button
+            class="edit-btn"
+            (click)="editUser(i)">
+            Edit
+          </button>
+
+          <button
+            class="delete-btn"
+            (click)="deleteUser(i)">
+            Delete
+          </button>
+
+        </td>
+
+      </tr>
+
+      <tr *ngIf="filteredUsers.length === 0">
+        <td colspan="5">
+          No Users Found
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>

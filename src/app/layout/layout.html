@@ -1,0 +1,116 @@
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+   <div class="logo">
+
+  <div class="emp-logo">
+    <div class="triangle"></div>
+    <div class="bar"></div>
+    <div class="bar small"></div>
+  </div>
+
+  <div class="logo-text">
+    <h2>EMP</h2>
+    <span>Enterprise Media Platform</span>
+  </div>
+
+</div>
+
+    <nav class="menu">
+
+      <a routerLink="/dashboard" routerLinkActive="active" class="menu-item">
+        <span>🏠</span>
+        <span>Dashboard</span>
+      </a>
+
+      <a routerLink="/users" routerLinkActive="active" class="menu-item">
+        <span>👥</span>
+        <span>Users</span>
+      </a>
+
+      <a routerLink="/media" routerLinkActive="active" class="menu-item">
+        <span>🎬</span>
+        <span>Media</span>
+      </a>
+
+      <a routerLink="/reports" routerLinkActive="active" class="menu-item">
+        <span>📊</span>
+        <span>Reports</span>
+      </a>
+
+      <a routerLink="/settings" routerLinkActive="active" class="menu-item">
+        <span>⚙️</span>
+        <span>Settings</span>
+      </a>
+
+      <a routerLink="/notifications" routerLinkActive="active" class="menu-item">
+        <span>🔔</span>
+        <span>Notifications</span>
+      </a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+
+      <div class="profile">
+
+        <img src="/images/profile.webp" alt="Profile">
+
+        <h4>Ram Developer</h4>
+
+        <p>Administrator</p>
+
+      </div>
+
+      <button class="logout-btn" (click)="logout()">
+        Logout
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- Main -->
+
+  <div class="main">
+
+    <header class="header">
+
+      <h2>Dashboard</h2>
+
+      <div class="header-right">
+
+        <div class="search-box">
+          <input type="text" placeholder="Search...">
+        </div>
+
+        <button class="icon-btn"
+                (click)="goToNotifications()">
+          🔔
+        </button>
+
+        <button class="icon-btn"
+                (click)="goToSettings()">
+          ⚙️
+        </button>
+
+        <div class="admin">
+          <img src="/images/profile.webp" alt="Admin">
+          <span>Admin</span>
+        </div>
+
+      </div>
+
+    </header>
+
+    <div class="page-content">
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </div>
+
+</div>

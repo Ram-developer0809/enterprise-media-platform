@@ -1,0 +1,83 @@
+<div class="reports-page">
+
+  <div class="page-header">
+    <h2>Reports Management</h2>
+
+    <div class="header-actions">
+
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" placeholder="Search movies...">
+  </div>
+
+  <button class="download-btn">
+    <span>⬇</span>
+    Download Report
+  </button>
+
+</div>
+  </div>
+
+  <div class="report-cards">
+
+    <div class="report-card">
+      <h3>Total Movies</h3>
+      <h1>150</h1>
+    </div>
+
+    <div class="report-card">
+      <h3>Total Users</h3>
+      <h1>320</h1>
+    </div>
+
+    <div class="report-card">
+      <h3>Total Categories</h3>
+      <h1>12</h1>
+    </div>
+
+    <div class="report-card">
+      <h3>Average Rating</h3>
+      <h1>8.7 ⭐</h1>
+    </div>
+
+  </div>
+
+  <div class="table-card">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Movie</th>
+          <th>Category</th>
+          <th>Year</th>
+          <th>Rating</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let movie of movies; let i = index">
+
+          <td>{{ i + 1 }}</td>
+          <td>{{ movie.movie }}</td>
+          <td>{{ movie.category }}</td>
+          <td>{{ movie.year }}</td>
+          <td>{{ movie.rating }}</td>
+
+          <td>
+            <span
+              [ngClass]="movie.status === 'Published' ? 'success' : 'pending'">
+              {{ movie.status }}
+            </span>
+          </td>
+
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>

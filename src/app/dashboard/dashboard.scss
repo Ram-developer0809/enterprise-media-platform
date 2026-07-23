@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+/* ================= Dashboard ================= */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #1e3a8a, #172554);
+  color: #fff;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar h2 {
+  font-size: 26px;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  transition: .3s;
+  font-size: 16px;
+}
+
+.sidebar li a:hover,
+.sidebar li a.active {
+  background: rgba(255,255,255,.18);
+}
+
+.logout-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: .3s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* ================= Main Content ================= */
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* ================= Topbar ================= */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.topbar input {
+  width: 350px;
+  height: 46px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 15px;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= Buttons ================= */
+
+.btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* ================= Titles ================= */
+
+h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 30px;
+}
+
+.table-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* ================= Cards ================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0,0,0,.12);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.card h2 {
+  font-size: 32px;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* ================= Table ================= */
+
+.table-section {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+  padding: 18px;
+  text-align: center;
+  font-size: 15px;
+}
+
+td {
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+  background: #eff6ff;
+}
+
+/* ================= Status Badges ================= */
+
+.success {
+  background: #22c55e;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.pending {
+  background: #f59e0b;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.failed {
+  background: #ef4444;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:992px){
+
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.dashboard{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.topbar{
+flex-direction:column;
+gap:15px;
+}
+
+.topbar input{
+width:100%;
+}
+
+.content{
+padding:20px;
+}
+
+}

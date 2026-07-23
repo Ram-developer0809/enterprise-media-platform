@@ -1,0 +1,42 @@
+<div class="notifications-container">
+
+  <h2>Notifications</h2>
+
+  <div class="notification-card"
+       *ngFor="let item of notifications; let i = index">
+
+    <div>
+      <h4>{{ item.title }}</h4>
+      <small>{{ item.time }}</small>
+      <p [style.color]="item.read ? 'green' : 'red'">
+        {{ item.read ? 'Read' : 'Unread' }}
+      </p>
+    </div>
+
+    <div class="actions">
+      <button (click)="markAsRead(item)">
+        Mark Read
+      </button>
+
+      <button (click)="deleteNotification(i)">
+        Delete
+      </button>
+     
+
+    </div>
+ <button
+  class="icon-btn"
+  title="Notifications"
+  (click)="goToNotifications()">
+  🔔
+</button>
+
+<button
+  class="icon-btn"
+  title="Settings"
+  (click)="goToSettings()">
+  ⚙️
+</button>
+  </div>
+
+</div>

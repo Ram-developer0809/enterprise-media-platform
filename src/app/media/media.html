@@ -1,0 +1,97 @@
+<div class="media-container">
+
+  <h2>Media Management</h2>
+
+  <div class="toolbar">
+
+    <input
+      type="text"
+      [(ngModel)]="searchText"
+      placeholder="Search Movie">
+
+    <select [(ngModel)]="selectedCategory">
+      <option value="">All Categories</option>
+      <option value="Action">Action</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Drama">Drama</option>
+      <option value="Romance">Romance</option>
+    </select>
+
+  </div>
+
+  <div class="form">
+
+    <input
+      type="text"
+      [(ngModel)]="newMovie.name"
+      placeholder="Movie Name">
+
+    <input
+      type="text"
+      [(ngModel)]="newMovie.category"
+      placeholder="Category">
+
+    <input
+      type="number"
+      [(ngModel)]="newMovie.year"
+      placeholder="Year">
+
+    <input
+      type="number"
+      [(ngModel)]="newMovie.rating"
+      placeholder="Rating">
+
+    <button (click)="addMovie()">
+      {{ editIndex !== null ? 'Update Movie' : 'Add Movie' }}
+    </button>
+
+  </div>
+
+  <table>
+
+    <thead>
+
+      <tr>
+        <th>ID</th>
+        <th>Movie Name</th>
+        <th>Category</th>
+        <th>Year</th>
+        <th>Rating</th>
+        <th>Actions</th>
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let movie of filteredMovies; let i = index">
+
+        <td>{{ movie.id }}</td>
+        <td>{{ movie.name }}</td>
+        <td>{{ movie.category }}</td>
+        <td>{{ movie.year }}</td>
+        <td>{{ movie.rating }}</td>
+
+        <td>
+
+          <button class="edit-btn" (click)="editMovie(i)">
+            Edit
+          </button>
+
+          <button class="delete-btn" (click)="deleteMovie(i)">
+            Delete
+          </button>
+
+        </td>
+
+      </tr>
+
+      <tr *ngIf="filteredMovies.length === 0">
+        <td colspan="6">No Movies Found</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
