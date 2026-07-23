@@ -1,59 +1,101 @@
-# EnterpriseMediaPlatform
+# Enterprise Media Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+## 📌 Project Overview
 
-## Development server
+Enterprise Media Platform is a production-style Angular application built with Angular 20 to manage digital media assets, quality control workflows, packaging, and content delivery.
 
-To start a local development server, run:
+This project demonstrates enterprise Angular architecture, reusable components, routing, and scalable application design.
 
-```bash
-ng serve
+---
+
+## ✅ Completed Features
+
+- Dashboard
+- User Management (CRUD)
+- Media Management (CRUD)
+- Reports
+- Settings
+- Notifications
+- Angular Standalone Components
+- Angular Routing
+- Two-way Data Binding
+- Component Communication
+- Responsive UI
+
+---
+
+## 🚧 Planned Features
+
+- JWT Authentication
+- Media Library
+- Upload Center
+- Quality Control (QC)
+- Reports Analytics
+- Route Guards
+- HTTP Interceptors
+- RxJS
+- Angular Signals
+- Angular Material UI
+- REST API Integration
+
+---
+
+## 🛠 Tech Stack
+
+- Angular 20
+- TypeScript
+- HTML5
+- SCSS
+- Git & GitHub
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+ ├── core/
+ ├── shared/
+ ├── layout/
+ ├── features/
+ ├── assets/
+ └── environments/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📸 Screenshots
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Screenshots will be added as each module is completed.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📅 Development Status
 
-```bash
-ng generate --help
-```
+🚧 Currently under development.
 
-## Building
+### Completed Modules
 
-To build the project run:
+- Dashboard
+- User Management
+- Media Management
+- Reports
+- Settings
+- Notifications
 
-```bash
-ng build
-```
+### Upcoming Modules
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Authentication
+- Upload Center
+- QC Module
+- REST API Integration
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 👨‍💻 Author
 
-```bash
-ng test
-```
+**Rambabu Gaddala**
 
-## Running end-to-end tests
+Angular Developer
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+GitHub: https://github.com/Ram-developer0809
